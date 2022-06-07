@@ -280,35 +280,35 @@ class HomePage extends StatelessWidget {
             ),
             child: TextButton(
               onPressed: () {
-                print('gender ${Provider.of<GenderProvider>(context, listen: false).gender}');
-                Provider.of<GenderProvider>(context, listen: false).gender==null
-                    ? showDialog(
-                        context: context,
-                        builder: (BuildContext context) {
-                          return AlertDialog(
-                            title: Text('Gender Empty'),
-                            content: Text('Please select gender'),
-                          );
-                        })
-                    :
-                     Provider.of<BodyProvider>(context, listen: false)
-                        .bmiCalcuate(
-                            Provider.of<DataProvider>(context, listen: false)
-                                .height,
-                            Provider.of<DataProvider>(context, listen: false)
-                                .weight);
-                Provider.of<BodyProvider>(context, listen: false)
-                    .bmrCalculation(
-                        Provider.of<DataProvider>(context, listen: false)
-                            .height
-                            .toDouble(),
-                        Provider.of<DataProvider>(context, listen: false)
-                            .weight
-                            .toDouble(),
-                        Provider.of<DataProvider>(context, listen: false).age,
-                        Provider.of<GenderProvider>(context, listen: false)
-                            .gender!);
-                Navigator.pushNamed(context, BmiResult.routeName);
+                if( Provider.of<GenderProvider>(context, listen: false).gender==null){
+                  showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: Text('Gender Empty'),
+                          content: Text('Please select gender'),
+                        );
+                      });
+                } else{
+                  Provider.of<BodyProvider>(context, listen: false)
+                      .bmiCalcuate(
+                      Provider.of<DataProvider>(context, listen: false)
+                          .height,
+                      Provider.of<DataProvider>(context, listen: false)
+                          .weight);
+                  Provider.of<BodyProvider>(context, listen: false)
+                      .bmrCalculation(
+                      Provider.of<DataProvider>(context, listen: false)
+                          .height
+                          .toDouble(),
+                      Provider.of<DataProvider>(context, listen: false)
+                          .weight
+                          .toDouble(),
+                      Provider.of<DataProvider>(context, listen: false).age,
+                      Provider.of<GenderProvider>(context, listen: false)
+                          .gender! );
+                  Navigator.pushNamed(context, BmiResult.routeName);
+                }
               },
               child: Text(
                 'Calculate',
