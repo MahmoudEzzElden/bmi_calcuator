@@ -29,7 +29,7 @@ to fetch the nearby places based on the user's current location.
 
 
 ## Acknowledgements
-- Many thanks to Engineer Mahmoud El Shennawy,many thanks to him.
+- Many thanks to  my mentor Engineer Mahmoud El Shenawy.
 
 
 ## Contact
