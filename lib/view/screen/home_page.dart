@@ -1,6 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:bmi_calculator/providers/data_provider.dart';
 import 'package:bmi_calculator/providers/gender_provider.dart';
 import 'package:bmi_calculator/view/screen/bmi_result.dart';
+import 'package:bmi_calculator/view/widgets/map_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -10,6 +13,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MapDrawer(),
       backgroundColor: Colors.blueGrey,
       appBar: AppBar(
         backgroundColor: Colors.blueGrey,
