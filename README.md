@@ -22,18 +22,10 @@ to fetch the nearby places based on the user's current location.
 
 ## Screenshots
 <div class="row">
-  <div class="column">
     <img src="https://github.com/MahmoudEzzElden/bmi_calcuator/blob/master/screenshots/HomePage.jpg" width="200" height="400" />
-  </div>
-  <div class="column">
     <img src="https://github.com/MahmoudEzzElden/bmi_calcuator/blob/master/screenshots/bmiResult.jpg" width="200" height="400" />
-  </div>
-  <div class="column">
     <img src="https://github.com/MahmoudEzzElden/bmi_calcuator/blob/master/screenshots/mapResult.jpg" width="200" height="400" />
-  </div>
-  <div class="column">
     <img src="https://github.com/MahmoudEzzElden/bmi_calcuator/blob/master/screenshots/mapsButton.jpg" width="200" height="400" />
-  </div>
 </div>
 
 
