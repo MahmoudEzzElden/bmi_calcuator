@@ -21,10 +21,15 @@ to fetch the nearby places based on the user's current location.
 
 
 ## Screenshots
-![Example screenshot](screenshots/bmiResult.jpg?raw=true "BMI Result")
-![Navigation](screenshots/mapsButton.jpg?raw=true "Map Navigation")
-![Map](screenshots/mapResult.jpg?raw=true "Maps")
-<!-- If you have screenshots you'd like to share, include them here. -->
+<div class="row">
+    <img src="https://github.com/MahmoudEzzElden/bmi_calcuator/blob/master/screenshots/HomePage.jpg" width="200" height="400" />
+    <img src="https://github.com/MahmoudEzzElden/bmi_calcuator/blob/master/screenshots/bmiResult.jpg" width="200" height="400" />
+    <img src="https://github.com/MahmoudEzzElden/bmi_calcuator/blob/master/screenshots/mapResult.jpg" width="200" height="400" />
+    <img src="https://github.com/MahmoudEzzElden/bmi_calcuator/blob/master/screenshots/mapsButton.jpg" width="200" height="400" />
+</div>
+
+
+
 
 
 
