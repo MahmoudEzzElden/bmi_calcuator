@@ -3,6 +3,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:bmi_calculator/providers/body_provider.dart';
 import 'package:bmi_calculator/providers/location_provider.dart';
+import 'package:bmi_calculator/providers/places_provider.dart';
 import 'package:bmi_calculator/view/screen/home_page.dart';
 import 'package:bmi_calculator/providers/data_provider.dart';
 import 'package:bmi_calculator/providers/gender_provider.dart';
@@ -24,6 +25,9 @@ void main() {
     ),
     ChangeNotifierProvider<LocationProvider>(
       create: (context) => LocationProvider(),
+    ),
+    ChangeNotifierProvider<PlaceProvider>(
+      create: (context) => PlaceProvider(),
     )
   ], child: MyApp()));
 }

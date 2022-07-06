@@ -6,9 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:provider/provider.dart';
 import '../../providers/location_provider.dart';
+import '../../providers/places_provider.dart';
 
 class StoresLocations extends StatefulWidget {
   static const routeName = 'StoresLocations';
+
+  const StoresLocations({Key? key}) : super(key: key);
 
   @override
   State<StoresLocations> createState() => _StoresLocationsState();
@@ -17,7 +20,7 @@ class StoresLocations extends StatefulWidget {
 class _StoresLocationsState extends State<StoresLocations> {
   Completer<GoogleMapController> _controller = Completer();
   GoogleMapController? mapController;
-  late Future<PlacesModel?> future;
+   Future<PlacesModel?>? future;
 
 
   @override
@@ -33,7 +36,7 @@ class _StoresLocationsState extends State<StoresLocations> {
     Future.sync(() => Provider.of<LocationProvider>(context, listen: false)
             .setCurrentLocation())
         .whenComplete(() => future =
-            Provider.of<LocationProvider>(context, listen: false).getPlaces(
+            Provider.of<PlaceProvider>(context, listen: false).getPlaces(
                 Provider.of<LocationProvider>(context, listen: false)
                     .currentLocation!
                     .latitude,
@@ -58,7 +61,6 @@ class _StoresLocationsState extends State<StoresLocations> {
                   )
                 : GoogleMap(
                     mapType: MapType.normal,
-                    //myLocationEnabled: true,
                     initialCameraPosition: CameraPosition(
                         target: LatLng(
                             Provider.of<LocationProvider>(context)
