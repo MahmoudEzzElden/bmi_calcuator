@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
                   child:Container(
                     padding: EdgeInsets.all(50),
                     child: Column(
-                      children: [
+                      children: const [
                         Icon(
                           IconData(0xe3c5, fontFamily: 'MaterialIcons'),
                           size: 80,
@@ -62,7 +62,7 @@ class HomePage extends StatelessWidget {
                   child:Container(
                     padding: EdgeInsets.all(50),
                     child: Column(
-                      children: [
+                      children: const [
                         Icon(
                           IconData(0xe261, fontFamily: 'MaterialIcons'),
                           size: 80,
